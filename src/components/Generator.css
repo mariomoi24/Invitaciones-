@@ -1,0 +1,200 @@
+.generator-container {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(circle at 100% 0%, rgba(212, 175, 55, 0.05), transparent 30%),
+        radial-gradient(circle at 0% 100%, rgba(212, 175, 55, 0.05), transparent 30%);
+    color: var(--text-main);
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-light);
+    font-size: 36px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--gold-primary);
+    font-size: 22px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 12px;
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+button, a.btn-secondary {
+    padding: 16px 24px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: var(--bg-dark);
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+    transform: translateY(-2px);
+}
+
+.result-box {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px dashed rgba(212, 175, 55, 0.2);
+    animation: fadeIn 0.4s ease-out;
+}
+
+.link-output {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    font-size: 14px;
+    color: var(--gold-light);
+    margin-bottom: 15px;
+    word-break: break-all;
+    user-select: all;
+}
+
+.result-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background: var(--accent);
+    color: var(--text-main);
+    flex: 1;
+    justify-content: center;
+}
+
+.btn-secondary:hover {
+    background: #3a3f55;
+}
+
+ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 0;
+}
+
+li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 16px 20px;
+    border-radius: 12px;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+li a:hover {
+    background: rgba(212, 175, 55, 0.08);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+}
+
+li a span:last-child {
+    font-size: 12px;
+    color: var(--gold-primary);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+li a:hover span:last-child {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
